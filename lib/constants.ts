@@ -10,6 +10,8 @@ export const SITE_CONFIG = {
   address: "123 Innovation Drive, San Francisco, CA 94102",
 };
 
+export const SIGNUP_URL = "https://joseph-81.th-workspace.techwarelab.com/auth";
+
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "Pricing", href: "/pricing" },

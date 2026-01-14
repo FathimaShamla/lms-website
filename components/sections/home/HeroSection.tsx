@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Play, Sparkles, Users, BookOpen, Award } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { SITE_CONFIG } from "@/lib/constants";
+import { SITE_CONFIG, SIGNUP_URL } from "@/lib/constants";
 import { heroTextContainer, heroTextItem, float } from "@/lib/animations";
 
 const floatingBadges = [
@@ -58,10 +58,12 @@ export function HeroSection() {
               variants={heroTextItem}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Button size="lg" className="group">
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <a href={SIGNUP_URL} target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="group">
+                  Start Free Trial
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
               <Button variant="outline" size="lg" className="group">
                 <Play className="w-5 h-5 mr-2" />
                 Watch Demo
