@@ -2,10 +2,11 @@
 
 import { motion } from "framer-motion";
 import { Check, X } from "lucide-react";
+import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { Container } from "@/components/ui/Container";
-import { PRICING_PLANS } from "@/lib/constants";
+import { PRICING_PLANS, SIGNUP_URL } from "@/lib/constants";
 import { staggerContainer, staggerItem } from "@/lib/animations";
 
 export function PricingCards() {
@@ -76,17 +77,40 @@ export function PricingCards() {
               </p>
 
               {/* CTA Button */}
-              <Button
-                className={`w-full mb-8 ${
-                  plan.highlighted
-                    ? "bg-white text-teal-600 hover:bg-teal-50"
-                    : ""
-                }`}
-                variant={plan.highlighted ? "secondary" : "primary"}
-                size="lg"
-              >
-                {plan.cta}
-              </Button>
+              {plan.cta === "Contact Sales" ? (
+                <Link href="/contact" className="block w-full mb-8">
+                  <Button
+                    className={`w-full ${
+                      plan.highlighted
+                        ? "bg-white text-teal-600 hover:bg-teal-50"
+                        : ""
+                    }`}
+                    variant={plan.highlighted ? "secondary" : "primary"}
+                    size="lg"
+                  >
+                    {plan.cta}
+                  </Button>
+                </Link>
+              ) : (
+                <a
+                  href={SIGNUP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full mb-8"
+                >
+                  <Button
+                    className={`w-full ${
+                      plan.highlighted
+                        ? "bg-white text-teal-600 hover:bg-teal-50"
+                        : ""
+                    }`}
+                    variant={plan.highlighted ? "secondary" : "primary"}
+                    size="lg"
+                  >
+                    {plan.cta}
+                  </Button>
+                </a>
+              )}
 
               {/* Features */}
               <div className="space-y-4">

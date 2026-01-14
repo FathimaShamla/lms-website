@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, GraduationCap } from "lucide-react";
-import { NAV_LINKS, SITE_CONFIG } from "@/lib/constants";
+import { NAV_LINKS, SITE_CONFIG, SIGNUP_URL } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
@@ -76,7 +76,9 @@ export function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button size="md">Start Free Trial</Button>
+            <a href={SIGNUP_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="md">Start Free Trial</Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -153,9 +155,11 @@ export function Header() {
 
                 {/* CTA */}
                 <div className="p-4">
-                  <Button className="w-full" size="lg">
-                    Start Free Trial
-                  </Button>
+                  <a href={SIGNUP_URL} target="_blank" rel="noopener noreferrer" className="block">
+                    <Button className="w-full" size="lg">
+                      Start Free Trial
+                    </Button>
+                  </a>
                 </div>
               </div>
             </motion.div>

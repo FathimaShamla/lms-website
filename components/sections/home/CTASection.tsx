@@ -5,6 +5,7 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { SIGNUP_URL } from "@/lib/constants";
 
 const benefits = [
   "14-day free trial",
@@ -60,10 +61,12 @@ export function CTASection() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
             >
-              <Button size="lg" className="group">
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <a href={SIGNUP_URL} target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="group">
+                  Start Free Trial
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
               <Link href="/contact">
                 <Button variant="outline" size="lg" className="border-gray-600 text-white hover:bg-white/10">
                   Talk to Sales
