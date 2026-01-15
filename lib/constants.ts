@@ -1,6 +1,6 @@
 export const SITE_CONFIG = {
   name: "Nexus LMS",
-  brandName: "LearnHub",
+  brandName: "Nexus LMS",
   tagline: "Learn Without Limits",
   description:
     "The complete learning management system for modern teams. Create, manage, and deliver engaging online courses with ease.",
@@ -192,8 +192,8 @@ export const TEAM_MEMBERS = [
     role: "CEO & Co-founder",
     bio: "Former educator with 15+ years in EdTech. Passionate about making learning accessible to everyone.",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop&crop=face",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
+    linkedin: "#",
+    twitter: "#",
   },
   {
     id: 2,
@@ -201,8 +201,8 @@ export const TEAM_MEMBERS = [
     role: "CTO & Co-founder",
     bio: "Full-stack engineer with expertise in scalable learning platforms. Previously at Google and Coursera.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&crop=face",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
+    linkedin: "#",
+    twitter: "#",
   },
   {
     id: 3,
@@ -210,8 +210,8 @@ export const TEAM_MEMBERS = [
     role: "Head of Product",
     bio: "Product leader focused on user experience. Believes great software should be invisible.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
+    linkedin: "#",
+    twitter: "#",
   },
   {
     id: 4,
@@ -219,8 +219,8 @@ export const TEAM_MEMBERS = [
     role: "Head of Customer Success",
     bio: "Dedicated to helping customers achieve their learning goals. 10+ years in customer success.",
     image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&crop=face",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
+    linkedin: "#",
+    twitter: "#",
   },
 ];
 
@@ -285,8 +285,8 @@ export const COMPANY_VALUES = [
 ];
 
 export const SOCIAL_LINKS = [
-  { name: "Twitter", href: "https://twitter.com", icon: "Twitter" },
-  { name: "LinkedIn", href: "https://linkedin.com", icon: "Linkedin" },
-  { name: "GitHub", href: "https://github.com", icon: "Github" },
-  { name: "YouTube", href: "https://youtube.com", icon: "Youtube" },
+  { name: "Twitter", href: "#", icon: "Twitter" },
+  { name: "LinkedIn", href: "#", icon: "Linkedin" },
+  { name: "GitHub", href: "#", icon: "Github" },
+  { name: "YouTube", href: "#", icon: "Youtube" },
 ];

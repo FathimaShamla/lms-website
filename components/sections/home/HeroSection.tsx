@@ -1,11 +1,15 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Play, Sparkles, Users, BookOpen, Award } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { VideoModal } from "@/components/ui/VideoModal";
 import { SITE_CONFIG, SIGNUP_URL } from "@/lib/constants";
 import { heroTextContainer, heroTextItem, float } from "@/lib/animations";
+
+const DEMO_VIDEO_ID = "-fPTdIruJUU";
 
 const floatingBadges = [
   { icon: Users, label: "50K+ Users", delay: 0 },
@@ -14,6 +18,8 @@ const floatingBadges = [
 ];
 
 export function HeroSection() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
   return (
     <section className="relative min-h-screen flex items-center gradient-hero overflow-hidden">
       {/* Background decorations */}
@@ -64,7 +70,12 @@ export function HeroSection() {
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </a>
-              <Button variant="outline" size="lg" className="group">
+              <Button
+                variant="outline"
+                size="lg"
+                className="group"
+                onClick={() => setIsVideoOpen(true)}
+              >
                 <Play className="w-5 h-5 mr-2" />
                 Watch Demo
               </Button>
@@ -140,6 +151,13 @@ export function HeroSection() {
           </motion.div>
         </div>
       </Container>
+
+      {/* Video Modal */}
+      <VideoModal
+        isOpen={isVideoOpen}
+        onClose={() => setIsVideoOpen(false)}
+        videoId={DEMO_VIDEO_ID}
+      />
     </section>
   );
 }
