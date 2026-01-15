@@ -79,7 +79,7 @@ export function Header() {
             <a href={SIGNUP_URL} target="_blank" rel="noopener noreferrer">
               <Button size="md">Start Free Trial</Button>
             </a>
-          </div>
+          </div>  
 
           {/* Mobile Menu Button */}
           <button
